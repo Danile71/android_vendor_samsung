@@ -3,6 +3,7 @@ LOCAL_PATH := vendor/samsung/serranoveltexx-common/proprietary
 # ADSP
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/bin/adsprpcd:system/bin/adsprpcd \
+        $(LOCAL_PATH)/bin/mpdecision:system/bin/mpdecision \
 	$(LOCAL_PATH)/vendor/lib/libadsprpc.so:system/vendor/lib/libadsprpc.so \
 	$(LOCAL_PATH)/vendor/lib/libfastcvopt.so:system/vendor/lib/libfastcvopt.so
 
@@ -111,7 +112,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/etc/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
 	$(LOCAL_PATH)/etc/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw \
 	$(LOCAL_PATH)/vendor/lib/hw/lights.msm8916.so:system/vendor/lib/hw/lights.msm8916.so \
-	(LOCAL_PATH)/vendor/lib/hw/power.qcom.so:system/vendor/lib/hw/power.qcom.so
+	$(LOCAL_PATH)/vendor/lib/hw/power.qcom.so:system/vendor/lib/hw/power.qcom.so
 
 	
 # Media
@@ -235,6 +236,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/lib/hw/audio_policy.default.so:system/lib/hw/audio_policy.default.so \
 	$(LOCAL_PATH)/lib/hw/audio.usb.default.so:system/lib/hw/audio.usb.default.so \
 	$(LOCAL_PATH)/lib/libtinyalsa.so:system/lib/libtinyalsa.so \
+	$(LOCAL_PATH)/lib/libyasalgo.so:system/lib/libyasalgo.so \
 	$(LOCAL_PATH)/lib/libsamsungVoipResampler.so:system/lib/libsamsungVoipResampler.so \
 	$(LOCAL_PATH)/lib/lib_soundaliveresampler.so:system/lib/lib_soundaliveresampler.so \
 	$(LOCAL_PATH)/lib/lib_SoundAlive_SRC192_ver205.so:system/lib/lib_SoundAlive_SRC192_ver205.so \
@@ -261,9 +263,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/etc/Tfa9895.cnt:system/etc/Tfa9895.cnt
 
 # WLAN
-#PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/lib/modules/pronto/pronto_wlan.ko:/system/lib/modules/pronto/pronto_wlan.ko
-
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/etc/firmware/wlan/prima/WCNSS_cfg.dat:/system//etc/firmware/wlan/prima/WCNSS_cfg.dat \
+	$(LOCAL_PATH)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:/system//etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
+	$(LOCAL_PATH)/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:/system//etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 #   $(LOCAL_PATH)/lib/libtinycompress.so:system/lib/libtinycompress.so \ 	
 #	$(LOCAL_PATH)/lib/libaudioutils.so:system/lib/libaudioutils.so \
