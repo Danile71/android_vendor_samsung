@@ -30,6 +30,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/lib/hw/nfc_nci.msm8916.so:system/lib/hw/nfc_nci.msm8916.so
 	
+# IRR
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/lib/hw/consumerir.default.so:system/lib/hw/consumerir.default.so
+
 # FM Radio
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/bin/fm_qsoc_patches:system/bin/fm_qsoc_patches
