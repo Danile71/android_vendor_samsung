@@ -16,6 +16,19 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/app/TimeService/TimeService.apk:system/app/TimeService/TimeService.apk
 	
 	
+# Dolby
+# Sensors
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/lib/libdlbdapstorage.so:system/lib/libdlbdapstorage.so \
+	$(LOCAL_PATH)/lib/soundfx/libswdap-mod.so:system/lib/soundfx/libswdap-mod.so \
+	$(LOCAL_PATH)/etc/dolby/ds-default.xml:system/etc/dolby/ds-default.xml \
+	$(LOCAL_PATH)/addon.d/23-dap.sh:system/addon.d/23-dap.sh \
+	$(LOCAL_PATH)/app/GalaxyUniversalRemote/GalaxyUniversalRemote.apk:system/app/GalaxyUniversalRemote/GalaxyUniversalRemote.apk \
+	$(LOCAL_PATH)/app/As/As.apk:system/app/As/As.apk \
+	$(LOCAL_PATH)/app/AsUI/AsUI.apk:system/app/AsUI/AsUI.apk
+
+
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/bin/btnvtool:system/bin/btnvtool \
@@ -28,6 +41,7 @@ PRODUCT_COPY_FILES += \
 
 # Nfc
 PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/etc/param/route.xml:system/etc/param/route.xml \
 	$(LOCAL_PATH)/lib/hw/nfc_nci.msm8916.so:system/lib/hw/nfc_nci.msm8916.so
 	
 # IRR
@@ -270,13 +284,13 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/lib/lib_SoundAlive_play_ver125e.so:system/lib/lib_SoundAlive_play_ver125e.so \
 	$(LOCAL_PATH)/lib/lib_SA_GoogleFX_ver124b.so:system/lib/lib_SA_GoogleFX_ver124b.so \
 	$(LOCAL_PATH)/lib/libaudiosa.so:system/lib/libaudiosa.so \
+	$(LOCAL_PATH)/lib/libmysound.so:system/lib/libmysound.so \
 	$(LOCAL_PATH)/etc/Tfa9895.cnt:system/etc/Tfa9895.cnt
 
 # WLAN
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/etc/firmware/wlan/prima/WCNSS_cfg.dat:/system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
         $(LOCAL_PATH)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
-        $(LOCAL_PATH)/lib/modules/wlan.ko:/system/lib/modules/wlan.ko \
 	$(LOCAL_PATH)/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:/system//etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 #   $(LOCAL_PATH)/lib/libtinycompress.so:system/lib/libtinycompress.so \ 	
