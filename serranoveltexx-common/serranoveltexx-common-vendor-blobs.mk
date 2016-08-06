@@ -306,5 +306,28 @@ PRODUCT_COPY_FILES += \
 # 	$(LOCAL_PATH)/lib/soundfx/libbundlewrapper.so:system/lib/soundfx/libbundlewrapper.so \
 #	$(LOCAL_PATH)/lib/soundfx/libeffectproxy.so:system/lib/soundfx/libeffectproxy.so \
 
+# LPM
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/media/battery_cover.spi:/system/media/battery_cover.spi \
+	$(LOCAL_PATH)/media/battery_error.spi:/system/media/battery_error.spi \
+	$(LOCAL_PATH)/media/battery_low.spi:/system/media/battery_low.spi \
+	$(LOCAL_PATH)/media/battery_temperature_error.spi:/system/media/battery_temperature_error.spi \
+	$(LOCAL_PATH)/media/battery_temperature_limit.spi:/system/media/battery_temperature_limit.spi \
+	$(LOCAL_PATH)/media/dock_error.spi:/system/media/dock_error.spi \
+	$(LOCAL_PATH)/media/incompatible_charger.spi:/system/media/incompatible_charger.spi \
+	$(LOCAL_PATH)/media/particle_intro.spi:/system/media/particle_intro.spi \
+	$(LOCAL_PATH)/media/particle_loop.spi:/system/media/particle_loop.spi \
+	$(LOCAL_PATH)/media/percentage.spi:/system/media/percentage.spi \
+	$(LOCAL_PATH)/media/wave_loop.spi:/system/media/wave_loop.spi \
+	$(LOCAL_PATH)/media/wireless_left.spi:/system/media/wireless_left.spi \
+	$(LOCAL_PATH)/media/wireless_right.spi:/system/media/wireless_right.spi \
+	$(LOCAL_PATH)/media/bootsamsung.qmg:/system/media/bootsamsung.qmg \
+	$(LOCAL_PATH)/media/bootsamsungloop.qmg:/system/media/bootsamsungloop.qmg \
+	$(LOCAL_PATH)/media/lcd_density.txt:/system/media/lcd_density.txt \
+	$(LOCAL_PATH)/media/shutdown.qmg:/system/media/shutdown.qmg \
+	$(LOCAL_PATH)/media/shutdown.qmg.cover:/system/media/shutdown.qmg.cover \
+        $(LOCAL_PATH)/bin/lpm:system/bin/lpm \
+	$(LOCAL_PATH)/lib/libsxqk_skia.so:system/lib/libsxqk_skia.so \
+	$(LOCAL_PATH)/lib/libmaet.so:system/lib/libmaet.so
 
 
