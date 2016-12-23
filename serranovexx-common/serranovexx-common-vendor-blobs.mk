@@ -1,5 +1,6 @@
 LOCAL_PATH := vendor/samsung/serranovexx-common/proprietary
 
+
 # ADSP
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/bin/adsprpcd:system/bin/adsprpcd \
@@ -104,30 +105,35 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/lib/hw/gps.msm8916.so:system/lib/hw/gps.msm8916.so \
 	$(LOCAL_PATH)/lib/libloc_eng.so:system/lib/libloc_eng.so \
 	$(LOCAL_PATH)/lib/libloc_core.so:system/lib/libloc_core.so
-	
+
 # Graphics
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vendor/lib/egl/eglsubAndroid.so:system/vendor/lib/egl/eglsubAndroid.so \
+	$(LOCAL_PATH)/vendor/lib/egl/eglSubDriverAndroid.so:system/vendor/lib/egl/eglSubDriverAndroid.so \
 	$(LOCAL_PATH)/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
+	$(LOCAL_PATH)/vendor/lib/egl/libESXEGL_adreno.so:system/vendor/lib/egl/libESXEGL_adreno.so \
+	$(LOCAL_PATH)/vendor/lib/egl/libESXGLESv1_CM_adreno.so:system/vendor/lib/egl/libESXGLESv1_CM_adreno.so \
+	$(LOCAL_PATH)/vendor/lib/egl/libESXGLESv2_adreno.so:system/vendor/lib/egl/libESXGLESv2_adreno.so \
 	$(LOCAL_PATH)/vendor/lib/egl/libGLESv1_CM_adreno.so:system/vendor/lib/egl/libGLESv1_CM_adreno.so \
 	$(LOCAL_PATH)/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
 	$(LOCAL_PATH)/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
-	$(LOCAL_PATH)/vendor/lib/egl/libplayback_adreno.so:system/vendor/lib/egl/libplayback_adreno.so \
+	$(LOCAL_PATH)/vendor/lib/egl/libQTapGLES.so:system/vendor/lib/egl/libQTapGLES.so \
+	$(LOCAL_PATH)/vendor/lib/egl/libRBEGL_adreno.so:system/vendor/lib/egl/libRBEGL_adreno.so \
+	$(LOCAL_PATH)/vendor/lib/egl/libRBGLESv1_CM_adreno.so:system/vendor/lib/egl/libRBGLESv1_CM_adreno.so \
+	$(LOCAL_PATH)/vendor/lib/egl/libRBGLESv2_adreno.so:system/vendor/lib/egl/libRBGLESv2_adreno.so \
 	$(LOCAL_PATH)/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
+	$(LOCAL_PATH)/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
 	$(LOCAL_PATH)/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
 	$(LOCAL_PATH)/vendor/lib/libc2d30-a4xx.so:system/vendor/lib/libc2d30-a4xx.so \
 	$(LOCAL_PATH)/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
-	$(LOCAL_PATH)/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
-	$(LOCAL_PATH)/vendor/lib/libc2d30.so:system/vendor/lib/libc2d30.so \
-	$(LOCAL_PATH)/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
-	$(LOCAL_PATH)/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
-	$(LOCAL_PATH)/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
 	$(LOCAL_PATH)/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
 	$(LOCAL_PATH)/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
+	$(LOCAL_PATH)/vendor/lib/libllvm-glnext.so:system/vendor/lib/libllvm-glnext.so \
 	$(LOCAL_PATH)/vendor/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
 	$(LOCAL_PATH)/vendor/lib/libOpenCL.so:system/vendor/lib/libOpenCL.so \
-	$(LOCAL_PATH)/vendor/lib/libsc-a2xx.so:system/vendor/lib/libsc-a2xx.so \
+	$(LOCAL_PATH)/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
 	$(LOCAL_PATH)/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
+	$(LOCAL_PATH)/vendor/lib/libsc-a2xx.so:system/vendor/lib/libsc-a2xx.so \
 	$(LOCAL_PATH)/vendor/lib/libscale.so:system/vendor/lib/libscale.so \
 	$(LOCAL_PATH)/etc/firmware/a225_pfp.fw:system/etc/firmware/a225_pfp.fw \
 	$(LOCAL_PATH)/etc/firmware/a225_pm4.fw:system/etc/firmware/a225_pm4.fw \
@@ -140,7 +146,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/etc/firmware/a420_pm4.fw:system/etc/firmware/a420_pm4.fw \
 	$(LOCAL_PATH)/etc/firmware/ice40.bin:system/etc/firmware/ice40.bin \
 	$(LOCAL_PATH)/etc/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
-	$(LOCAL_PATH)/etc/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw \
+	$(LOCAL_PATH)/etc/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw	\
 	$(LOCAL_PATH)/vendor/lib/hw/lights.msm8916.so:system/vendor/lib/hw/lights.msm8916.so \
 	$(LOCAL_PATH)/vendor/lib/hw/power.qcom.so:system/vendor/lib/hw/power.qcom.so
 
@@ -262,7 +268,10 @@ PRODUCT_COPY_FILES += \
 	#$(LOCAL_PATH)/vendor/firmware/keymaster.b02:system/vendor/firmware/keymaster/keymaster.b02 \
 	#$(LOCAL_PATH)/vendor/firmware/keymaster.b03:system/vendor/firmware/keymaster/keymaster.b03 \
 	#$(LOCAL_PATH)/vendor/firmware/keymaster.mdt:system/vendor/firmware/keymaster/keymaster.mdt
-		
+	
+#PRODUCT_COPY_FILES += \
+#    vendor/cm/config/permissions/com.cyanogenmod.nfc.enhanced.xml:system/etc/permissions/com.cyanogenmod.nfc.enhanced.xml
+	
 # Audio
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/lib/hw/audio_policy.default.so:system/lib/hw/audio_policy.default.so \
