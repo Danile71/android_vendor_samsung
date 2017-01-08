@@ -91,8 +91,8 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/framework/com.qti.location.sdk.jar:system/framework/com.qti.location.sdk.jar \
-	$(LOCAL_PATH)/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
+	$(LOCAL_PATH)/framework/com.qti.location.sdk-2.jar:system/framework/com.qti.location.sdk-2.jar \
+	$(LOCAL_PATH)/framework/qti-telephony-common-2.jar:system/framework/qti-telephony-common-2.jar \
 	$(LOCAL_PATH)/priv-app/com.qualcomm.location/com.qualcomm.location.apk:system/priv-app/com.qualcomm.location/com.qualcomm.location.apk \
 	$(LOCAL_PATH)/bin/irsc_util:system/bin/irsc_util \
 	$(LOCAL_PATH)/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
