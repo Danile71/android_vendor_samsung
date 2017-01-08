@@ -21,13 +21,7 @@ PRODUCT_COPY_FILES += \
 # Dolby
 # Sensors
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/lib/libdlbdapstorage.so:system/lib/libdlbdapstorage.so \
-	$(LOCAL_PATH)/lib/soundfx/libswdap-mod.so:system/lib/soundfx/libswdap-mod.so \
-	$(LOCAL_PATH)/etc/dolby/ds-default.xml:system/etc/dolby/ds-default.xml \
-	$(LOCAL_PATH)/addon.d/23-dap.sh:system/addon.d/23-dap.sh \
-	$(LOCAL_PATH)/app/GalaxyUniversalRemote/GalaxyUniversalRemote.apk:system/app/GalaxyUniversalRemote/GalaxyUniversalRemote.apk \
-	$(LOCAL_PATH)/app/As/As.apk:system/app/As/As.apk \
-	$(LOCAL_PATH)/app/AsUI/AsUI.apk:system/app/AsUI/AsUI.apk
+	$(LOCAL_PATH)/app/GalaxyUniversalRemote/GalaxyUniversalRemote.apk:system/app/GalaxyUniversalRemote/GalaxyUniversalRemote.apk
 
 
 
@@ -92,19 +86,26 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
 	$(LOCAL_PATH)/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar
 
+
+
+
 # GPS
 PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/framework/com.qti.location.sdk.jar:system/framework/com.qti.location.sdk.jar \
+	$(LOCAL_PATH)/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
+	$(LOCAL_PATH)/priv-app/com.qualcomm.location/com.qualcomm.location.apk:system/priv-app/com.qualcomm.location/com.qualcomm.location.apk \
 	$(LOCAL_PATH)/bin/irsc_util:system/bin/irsc_util \
 	$(LOCAL_PATH)/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
 	$(LOCAL_PATH)/vendor/lib/hw/flp.default.so:system/vendor/lib/hw/flp.default.so \
 	$(LOCAL_PATH)/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
 	$(LOCAL_PATH)/vendor/lib/libizat_core.so:system/vendor/lib/libizat_core.so \
 	$(LOCAL_PATH)/vendor/lib/liblbs_core.so:system/vendor/lib/liblbs_core.so \
-	$(LOCAL_PATH)/vendor/lib/liblocationservice.so:system/vendor/lib/liblocationservice.so \
-	$(LOCAL_PATH)/lib/libgps.utils.so:system/lib/libgps.utils.so \
-        $(LOCAL_PATH)/lib/hw/gps.msm8916.so:system/lib/hw/gps.msm8916.so \
-	$(LOCAL_PATH)/lib/libloc_eng.so:system/lib/libloc_eng.so \
-	$(LOCAL_PATH)/lib/libloc_core.so:system/lib/libloc_core.so
+	$(LOCAL_PATH)/vendor/lib/libdataitems.so:system/vendor/lib/libdataitems.so \
+	$(LOCAL_PATH)/vendor/lib/libflp.so:system/vendor/lib/libflp.so \
+	$(LOCAL_PATH)/vendor/lib/liblocationservice_glue.so:system/vendor/lib/liblocationservice_glue.so \
+	$(LOCAL_PATH)/vendor/lib/libulp2.so:system/vendor/lib/libulp2.so \
+	$(LOCAL_PATH)/vendor/lib/liblowi_client.so:system/vendor/lib/liblowi_client.so \
+	$(LOCAL_PATH)/vendor/lib/liblocationservice.so:system/vendor/lib/liblocationservice.so
 
 # Graphics
 PRODUCT_COPY_FILES += \
