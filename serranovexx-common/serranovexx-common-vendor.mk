@@ -2,10 +2,9 @@
 DEVICE_PACKAGE_OVERLAYS := vendor/samsung/serranovexx-common/overlay
 
 PRODUCT_PACKAGES += \
-    com.qualcomm.location
-
-PRODUCT_PACKAGES += \
     libtime_genoff \
+    libqmi_cci \
+    libqmi_common_so \
     TimeService
 
 PRODUCT_PACKAGES += \
